@@ -1,0 +1,272 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+  @import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+
+  :root {
+    --primary: #094b65;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+    background: #fff;
+    min-height: 100vh;
+  }
+
+  #header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+  #header .logo {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+  }
+
+  #header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #header ul li {
+    list-style: none;
+    margin-left: 20px;
+  }
+
+  #header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: var(--primary);
+    border-radius: 20px;
+  }
+
+  #header ul li a:hover,
+  #header ul li a.active {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, var(--primary), transparent);
+    z-index: 10;
+  }
+
+  section img {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+  section #text {
+    position: absolute;
+    color: var(--primary);
+    font-size: 10vw;
+    text-align: center;
+    line-height: 0.55em;
+    font-family: "Rancho", cursive;
+    transform: translatey(-50%);
+  }
+
+  section #text span {
+    font-size: 0.2em;
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+
+  #btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #a6401e;
+    color: var(--primary);
+    color: white; /* Change text color to white */
+    font-size: 1 em; /* Make font size smaller */
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    transform: translatey(100px);
+  }
+
+  .sec {
+    position: relative;
+    padding: 100px;
+    background: var(--primary);
+
+  }
+
+  .sec h2 {
+    font-size: 3.5em;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .sec p {
+    font-size: 1em;
+    color: #fff;
+  }
+
+  footer {
+    position: relative;
+    padding: 0px 100px;
+    background: var(--primary);
+  }
+
+  footer a {
+    text-decoration: none;
+    color: #fff;
+  }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Forest Landing Page | Nothing4us</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <head>
+      <title>Parallax Scrolling Website</title>
+    </head>
+    <body>
+      <header id="header">
+        <a href="#" class="logo">Risk Assessment</a>
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+          </li>
+        </ul>
+      </header>
+
+      <section>
+        <h2 id="text" style="font-size: 70px">
+          Heart Disease Prediction System
+        </h2>
+
+        <img
+          src="https://user-images.githubusercontent.com/65358991/170092504-132fa547-5ced-40e5-ab64-ded61518fac2.png"
+          id="bird1"
+        />
+        <img
+          src="https://user-images.githubusercontent.com/65358991/170092542-9747edcc-fb51-4e21-aaf5-a61119393618.png"
+          id="bird2"
+        />
+
+        <a href="{{ url_for('heartdisease') }}" id="btn"
+          >Know Your Heart Health</a
+        >
+
+        <img
+          src="https://user-images.githubusercontent.com/65358991/170092605-eada6510-d556-45cc-b7fa-9e4d1d258d26.png"
+          id="rocks"
+        />
+        <img
+          src="https://user-images.githubusercontent.com/65358991/170092616-5a70c4af-2eed-496f-bde9-b5fcc7142a31.png"
+          id="water"
+        />
+      </section>
+
+      <div class="sec">
+        <h2>Overview</h2>
+        <p>
+          Heart disease describes a range of conditions that affect your heart.
+          Diseases under the heart disease umbrella include blood vessel
+          diseases, such as coronary artery disease; heart rhythm problems
+          (arrhythmias); and heart defects you're born with (congenital heart
+          defects), among others.
+        </p>
+        <p>
+          The term "heart disease" is often used interchangeably with the term
+          "cardiovascular disease." Cardiovascular disease generally refers to
+          conditions that involve narrowed or blocked blood vessels that can
+          lead to a heart attack, chest pain (angina) or stroke. Other heart
+          conditions, such as those that affect your heart's muscle, valves or
+          rhythm, also are considered forms of heart disease.
+        </p>
+        <p>
+          Many forms of heart disease can be prevented or treated with healthy
+          lifestyle choices.
+        </p>
+        <br /><br />
+        <h2>Symptoms</h2>
+        <p>
+          1. Chest pain, chest tightness, chest pressure and chest
+          discomfort(angina)
+        </p>
+        <p>2. Shortness of breath</p>
+        <p>
+          3. Pain, numbness, weakness or coldness in your legs or arms if the
+          blood vessels in those parts of your body are narrowed
+        </p>
+        <p>4. Pain in the neck, jaw, throat, upper abdomen or back</p>
+      </div>
+
+      <script>
+        let text = document.getElementById("text");
+        let bird1 = document.getElementById("bird1");
+        let bird2 = document.getElementById("bird2");
+        let btn = document.getElementById("btn");
+        let rocks = document.getElementById("rocks");
+        let forest = document.getElementById("forest");
+        let water = document.getElementById("water");
+        let header = document.getElementById("header");
+
+        window.addEventListener("scroll", function () {
+          let value = window.scrollY;
+
+          text.style.top = 50 + value * -0.1 + "%";
+          bird2.style.top = value * -1.5 + "px";
+          bird2.style.left = value * 2 + "px";
+          bird1.style.top = value * -1.5 + "px";
+          bird1.style.left = value * -5 + "px";
+          btn.style.marginTop = value * 1.5 + "px";
+          rocks.style.top = value * -0.12 + "px";
+          forest.style.top = value * 0.25 + "px";
+          header.style.top = value * 0.5 + "px";
+        });
+      </script>
+    </body>
+    <!-- partial -->
+    <script src="./script.js"></script>
+  </body>
+</html>
